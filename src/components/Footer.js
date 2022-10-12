@@ -1,8 +1,12 @@
 import React from 'react'
+import FooterStyle from './FooterStyle'
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <FooterStyle>
+            <p>Thanks for your visit!</p>
+            <p>Tasty food recipes 2022 &#169;</p>
+        </FooterStyle>
     )
 }
 
