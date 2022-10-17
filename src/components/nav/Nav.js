@@ -6,14 +6,14 @@ const Nav = () => {
     return (
         <NavStyle>
             <section>
-                <h1>Tasty Food Recipes!</h1>
+                <h1>NASA Project</h1>
                 <div>
                     <p>Loggin etc..</p>
                     <input type="text" name="searchFood" id="searchFood" />
                 </div>
             </section>
             <nav>
-                <Link to={"../../pages/home"}>Home</Link>
+                <Link className="linkNav" to={"../../pages/home"}>Home</Link>
             </nav>
         </NavStyle>
     )

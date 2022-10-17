@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-//#6ef1d0d5     Colors
-//#7CCFF2
-//#F2889A
-//#F2AA57
-//#63F27E
+//#290275    Colors
+//#874FF7
+//#5405F5
+//#402675
+//#4304C2
 //#797575
 
 const GlobalStyle = createGlobalStyle`

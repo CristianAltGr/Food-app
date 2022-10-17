@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <FooterStyle>
             <p>Thanks for your visit!</p>
-            <p>Tasty food recipes 2022 &#169;</p>
+            <p>NASA project 2022 &#169;</p>
         </FooterStyle>
     )
 }
