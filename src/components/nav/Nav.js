@@ -13,7 +13,8 @@ const Nav = () => {
                 </div>
             </section>
             <nav>
-                <Link className="linkNav" to={"../../pages/home"}>Home</Link>
+                <Link className="linkNav" to={""}>Home</Link>
+                <Link className="linkNav" to={"/projects/"}>Projects</Link>
             </nav>
         </NavStyle>
     )

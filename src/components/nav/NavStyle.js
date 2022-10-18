@@ -27,8 +27,6 @@ const NavStyle = styled.div`
 
     .linkNav{
 
-        border-left: 1px solid white; 
-        border-right: 1px solid white; 
         height: 100%;
         margin: 0;
         padding: 1vh;
