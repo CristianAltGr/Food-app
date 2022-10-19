@@ -4,6 +4,7 @@ import Nav from "../components/nav/Nav";
 import Home from "../pages/home/Home";
 import List from "../pages/list/List";
 import PhotoEarth from "../pages/photoEarth/PhotoEarth";
+import Asteroid from "../pages/asteroid/Asteroid"
 
 
 const Router = () => {
@@ -16,6 +17,7 @@ const Router = () => {
                     <Route index element={<Home />} />
                     <Route path="projects/" element={<List />} />
                     <Route path="projects/earth/" element={<PhotoEarth />} />
+                    <Route path="projects/asteroids/" element={<Asteroid />} />
                 </Route>
                 <Route path="*" element={<div><h2>404 not found</h2></div>} />
             </Routes>

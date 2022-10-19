@@ -16,6 +16,7 @@ const Nav = () => {
                 <Link className="linkNav" to={""}>Home</Link>
                 <Link className="linkNav" to={"/projects/"}>Projects</Link>
                 <Link className="linkNav" to={"/projects/earth/"}>Earth</Link>
+                <Link className="linkNav" to={"/projects/asteroids/"}>Asteroids</Link>
             </nav>
         </NavStyle>
     )

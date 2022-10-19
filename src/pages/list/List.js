@@ -8,7 +8,7 @@ const List = () => {
 
             <div>
                 <Link to={"/projects/earth/"}>Earth</Link>
-                Asteroids
+                <Link to={"/projects/asteroids/"}>Asteroids</Link>
                 Rober photos // rober type photo
                 techport list /// techport porject
                 **stelites
