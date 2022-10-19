@@ -15,6 +15,7 @@ const Nav = () => {
             <nav>
                 <Link className="linkNav" to={""}>Home</Link>
                 <Link className="linkNav" to={"/projects/"}>Projects</Link>
+                <Link className="linkNav" to={"/projects/earth/"}>Earth</Link>
             </nav>
         </NavStyle>
     )

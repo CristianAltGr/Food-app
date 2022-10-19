@@ -1,17 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const List = () => {
     return (
-        <div>
+        <section>
             <h2>List of services</h2>
 
-            picture of the earth
-            Asteroids
-            Rober photos // rober type photo
-            techport list /// techport porject
-            **stelites
+            <div>
+                <Link to={"/projects/earth/"}>Earth</Link>
+                Asteroids
+                Rober photos // rober type photo
+                techport list /// techport porject
+                **stelites
+            </div>
 
-        </div>
+        </section>
     )
 }
 

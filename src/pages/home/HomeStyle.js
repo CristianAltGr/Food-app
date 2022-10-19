@@ -4,7 +4,7 @@ import styled from "styled-components";
 const HomeStyle = styled.div`
 
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
     
     section{
         display: grid ;
