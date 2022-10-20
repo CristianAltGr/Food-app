@@ -6,13 +6,13 @@ import GetAsteriodData from '../../services/AsteroidData';
 
 const AsteroidItem = () => {
 
-    const id = useParams();
+    const url = useParams();
     const [asteroid, setAsteroid] = useState({});
 
     useEffect(() => {
 
         const getData = async () => {
-            const data = await GetAsteriodData(id);
+            const data = await GetAsteriodData(url.id);
             setAsteroid(data);
         }
         getData();
