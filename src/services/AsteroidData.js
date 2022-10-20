@@ -7,7 +7,6 @@ const GetAsteriodData = async (id) => {
 
         const response = await axios.get(`https://api.nasa.gov/neo/rest/v1/neo/${id}?api_key=${APIKey}`)
             .then((res) => res.data);
-        console.log(response);
         return response;
 
     } catch (e) {
