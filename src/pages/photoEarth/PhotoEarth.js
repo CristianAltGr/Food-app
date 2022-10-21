@@ -5,7 +5,7 @@ import EarthStyle from './PhotoEarthStyle';
 const PhotoEarth = () => {
 
     const today = new Date();
-    const day = today.getDate() - 5;
+    const day = today.getDate() - 3;
     const month = today.getMonth() + 1;
     const year = today.getFullYear();
     const [images, setImages] = useState([]);
@@ -36,7 +36,7 @@ const PhotoEarth = () => {
             <h2>Photos of the Earth</h2>
             <section>
                 <p>These photos are made on {date}</p>
-                <p>You can search photos of any day: "Note: NASA sends photos until last week"</p>
+                <p>You can search photos of any day: "Note: NASA sends photos until last three days"</p>
                 <input type="date" name="date" id="date" onChange={dateChange} />
             </section>
 
