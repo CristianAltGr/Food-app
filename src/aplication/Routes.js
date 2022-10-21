@@ -6,6 +6,7 @@ import List from "../pages/list/List";
 import PhotoEarth from "../pages/photoEarth/PhotoEarth";
 import Asteroid from "../pages/asteroid/Asteroid"
 import AsteroidItem from "../pages/asteroidItem/AsteroidItem";
+import Rober from "../pages/rober/Rober";
 
 
 const Router = () => {
@@ -20,6 +21,8 @@ const Router = () => {
                     <Route path="projects/earth/" element={<PhotoEarth />} />
                     <Route path="projects/asteroids/" element={<Asteroid />} />
                     <Route path="projects/asteroids/:id" element={<AsteroidItem />} />
+                    <Route path="projects/rober" element={<Rober />} />
+
                 </Route>
                 <Route path="*" element={<div><h2>404 not found</h2></div>} />
             </Routes>
