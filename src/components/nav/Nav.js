@@ -13,12 +13,12 @@ const Nav = () => {
                 </div>
             </section>
             <nav>
-                <Link className="linkNav" to={""}>Home</Link>
-                <Link className="linkNav" to={"/projects/"}>Projects</Link>
-                <Link className="linkNav" to={"/projects/earth/"}>Earth</Link>
-                <Link className="linkNav" to={"/projects/asteroids/"}>Asteroids</Link>
-                <Link className="linkNav" to={"/projects/rober/"}>Rober</Link>
-
+                <Link className="linkNav" to={""}>HOME</Link>
+                <Link className="linkNav" to={"/projects/"}>PROJECTS</Link>
+                <Link className="linkNav" to={"/projects/earth/"}>EARTH</Link>
+                <Link className="linkNav" to={"/projects/asteroids/"}>ASTEROIDS</Link>
+                <Link className="linkNav" to={"/projects/rober/"}>ROBER</Link>
+                <Link className="linkNav" to={"/projects/techport/"}>TECHPORT</Link>
             </nav>
         </NavStyle>
     )
