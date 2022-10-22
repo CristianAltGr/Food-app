@@ -35,9 +35,6 @@ const Project = ({ id, update }) => {
 
 
     return (
-
-
-
         <div>
             <h5 onClick={changeActive}>{project.title}</h5>
 

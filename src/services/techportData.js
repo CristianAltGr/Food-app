@@ -23,7 +23,6 @@ export const getTechProject = async (project) => {
 
         const response = await axios.get(` https://api.nasa.gov/techport/api/projects/${project}?api_key=${APIKey}`)
             .then((res) => res.data);
-        console.log(response.project)
         return response.project;
 
     } catch (e) {

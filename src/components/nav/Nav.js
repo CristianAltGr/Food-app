@@ -14,7 +14,6 @@ const Nav = () => {
             </section>
             <nav>
                 <Link className="linkNav" to={""}>HOME</Link>
-                <Link className="linkNav" to={"/projects/"}>PROJECTS</Link>
                 <Link className="linkNav" to={"/projects/earth/"}>EARTH</Link>
                 <Link className="linkNav" to={"/projects/asteroids/"}>ASTEROIDS</Link>
                 <Link className="linkNav" to={"/projects/rober/"}>ROBER</Link>
