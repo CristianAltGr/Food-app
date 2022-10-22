@@ -30,8 +30,8 @@ const AsteroidItem = () => {
                     <h3>{asteroid.designation}</h3>
                     <p>id: {asteroid.id}</p>
                     <p>Size diameter:</p>
-                    <p>Max: {asteroid.estimated_diameter.meters.estimated_diameter_max} m </p>
-                    <p>Min:   {asteroid.estimated_diameter.meters.estimated_diameter_min} m </p>
+                    <p>Max: {parseFloat(asteroid.estimated_diameter.meters.estimated_diameter_max).toFixed(2)} m </p>
+                    <p>Min:   {parseFloat(asteroid.estimated_diameter.meters.estimated_diameter_min).toFixed(2)} m </p>
                     <p>Dangerous hazarous: {asteroid.is_potentially_hazardous_asteroid ? "Yes" : "No"}</p>
                     <p>Sentry obrject: {asteroid.is_sentry_object ? "Yes" : "No"}</p>
                     <p>First observation date: {asteroid.orbital_data.first_observation_date}</p>
@@ -46,8 +46,8 @@ const AsteroidItem = () => {
 
                                 <div key={orbit.close_approach_date_full}>
                                     <p>{orbit.close_approach_date_full}</p>
-                                    <p>Miss distance: {orbit.miss_distance.kilometers} Km</p>
-                                    <p>Relative velocity: {orbit.relative_velocity.kilometers_per_hour} Km/h</p>
+                                    <p>Miss distance: {parseFloat(orbit.miss_distance.kilometers).toFixed(2)} Km</p>
+                                    <p>Relative velocity: {parseFloat(orbit.relative_velocity.kilometers_per_hour).toFixed(2)} Km/h</p>
                                     <p>Orbiting body: {orbit.orbiting_body}</p>
                                 </div>
                             )
