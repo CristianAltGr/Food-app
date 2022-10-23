@@ -2,7 +2,7 @@ import axios from "axios";
 import APIKey from "./APIKey";
 
 const today = new Date();
-const day = today.getDate() - 2;
+const day = today.getDate() - 4;
 const month = today.getMonth() + 1;
 const year = today.getFullYear();
 const date = `${year}-${month}-${day}`;

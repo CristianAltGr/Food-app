@@ -7,6 +7,7 @@ import Asteroid from "../pages/asteroid/Asteroid"
 import AsteroidItem from "../pages/asteroidItem/AsteroidItem";
 import Rober from "../pages/rober/Rober";
 import Techport from "../pages/techport/Techport";
+import PrivateRoute from "./PrivateRoutes";
 
 
 const Router = () => {
@@ -17,13 +18,21 @@ const Router = () => {
             <Routes>
                 <Route path={process.env.PUBLIC_URL}>
                     <Route index element={<Home />} />
-                    <Route path="projects/earth/" element={<PhotoEarth />} />
-                    <Route path="projects/asteroids/" element={<Asteroid />} />
-                    <Route path="projects/asteroids/:id" element={<AsteroidItem />} />
-                    <Route path="projects/rober" element={<Rober />} />
-                    <Route path="projects/techport" element={<Techport />} />
-
-
+                    <Route path="projects/earth/" element={<PrivateRoute />} >
+                        <Route index element={<PhotoEarth />} />
+                    </Route>
+                    <Route path="projects/asteroids/" element={<PrivateRoute />} >
+                        <Route index element={<Asteroid />} />
+                    </Route>
+                    <Route path="projects/asteroids/:id" element={<PrivateRoute />} >
+                        <Route index element={<AsteroidItem />} />
+                    </Route>
+                    <Route path="projects/rober" element={<PrivateRoute />}>
+                        <Route index element={<Rober />} />
+                    </Route>
+                    <Route path="projects/techport" element={<PrivateRoute />} >
+                        <Route index element={<Techport />} />
+                    </Route>
                 </Route>
                 <Route path="*" element={<div><h2>404 not found</h2></div>} />
             </Routes>

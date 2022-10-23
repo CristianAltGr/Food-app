@@ -1,6 +1,7 @@
 import React from 'react'
 import NavStyle from './NavStyle'
 import Link from "../Link"
+import Login from '../login/login'
 
 const Nav = () => {
     return (
@@ -8,8 +9,7 @@ const Nav = () => {
             <section>
                 <h1>NASA Project</h1>
                 <div>
-                    <p>Loggin etc..</p>
-                    <input type="text" name="searchFood" id="searchFood" />
+                    <Login />
                 </div>
             </section>
             <nav>

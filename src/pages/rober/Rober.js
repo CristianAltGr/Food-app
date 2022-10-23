@@ -25,9 +25,11 @@ const Rober = () => {
         <>
             <div>
                 <h3>Robers Mars</h3>
-                <p>You can see the photos than Robers make two days ago at Mars, in this moment there are two Robers:</p>
-                <p>The veteran: Curiosity</p>
-                <p>And the last one: The perseverance</p>
+                <p>You can see the photos than Robers make four days ago at Mars, in this moment there are two Robers:</p>
+                <ul>
+                    <li>The veteran: Curiosity</li>
+                    <li>And the last one: The perseverance</li>
+                </ul>
                 <p>Before there were others like spirit or oppotunity. If you are interested, you can find more information on this
                     <a href="https://www.britannica.com/topic/NASA" target="_blank" rel="noopener noreferrer"> page</a></p>
             </div>

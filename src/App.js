@@ -1,4 +1,5 @@
 
+import Provider from "./aplication/provider";
 import Router from "./aplication/Routes";
 import GlobalStyle from "./styles/GlobalStyle";
 
@@ -8,10 +9,10 @@ const App = () => {
 
     return (
 
-        <>
+        <Provider>
             <GlobalStyle />
             <Router />
-        </>
+        </Provider>
 
 
     )
