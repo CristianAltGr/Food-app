@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { getDayPhoto } from '../../services/PhotoDay';
-import HomeStyle, { Photo, DataPhoto } from './HomeStyle';
+import HomeStyle, { Photo, DataPhoto, ListStyle } from './HomeStyle';
 import Link from '../../components/Link';
 
 
@@ -33,28 +33,25 @@ const Home = () => {
 
             {interactive &&
 
-                <div>
+                <ListStyle>
                     <section>
-                        <h2>List of pages</h2>
-
-                        <div>
-                            <ul>
-                                <li><Link className="linkHome" to={"/projects/earth/"}>EARTH</Link>
-                                    <p>On this page you can see the eath from space</p>
-                                </li>
-                                <li><Link className="linkHome" to={"/projects/asteroids/"}>ASTEROIDS</Link>
-                                    <p>On this page you can learn about the all asteroids around the earth</p>
-                                </li>
-                                <li><Link className="linkHome" to={"/projects/rober/"}>ROBER</Link>
-                                    <p>On this page you can see the pictures of mars from a Rober</p>
-                                </li>
-                                <li><Link className="linkHome" to={"/projects/techport/"}>TECHPORT</Link>
-                                    <p>On this one you can learn about all NASA projects</p>
-                                </li>
-                            </ul>
-                        </div>
+                        <h2>List of pages : </h2>
+                        <ul>
+                            <li type="none"><Link className="linkHome" to={"/projects/earth/"}>EARTH</Link>
+                                <p>On this page you can see the eath from space</p>
+                            </li>
+                            <li type="none"><Link className="linkHome" to={"/projects/asteroids/"}>ASTEROIDS</Link>
+                                <p>On this page you can learn about the all asteroids around the earth</p>
+                            </li>
+                            <li type="none"><Link className="linkHome" to={"/projects/rober/"}>ROBER</Link>
+                                <p>On this page you can see the pictures of mars from a Rober</p>
+                            </li >
+                            <li type="none"><Link className="linkHome" to={"/projects/techport/"}>TECHPORT</Link>
+                                <p>On this one you can learn about all NASA projects</p>
+                            </li>
+                        </ul>
                     </section>
-                </div>
+                </ListStyle>
             }
 
             <div>

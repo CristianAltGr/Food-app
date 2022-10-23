@@ -73,7 +73,6 @@ const Login = () => {
     return (
         <>
             <LogInButton id="testLog" onClick={loginCard}><p>{LogMsg}</p></LogInButton>
-            <LogInButton onClick={loginCard}><p>SIGN UP </p></LogInButton>
 
             {logCard &&
                 <>

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+
 //#290275    Colors
 //#874FF7
 //#5405F5

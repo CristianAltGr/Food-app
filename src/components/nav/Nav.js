@@ -2,12 +2,19 @@ import React from 'react'
 import NavStyle from './NavStyle'
 import Link from "../Link"
 import Login from '../login/login'
+import Logo from "../../assets/nasa-logo.svg"
 
 const Nav = () => {
+
+
+
     return (
         <NavStyle>
             <section>
-                <h1>NASA Project</h1>
+                <div>
+                    <img src={Logo} alt="logo" />
+                    <h1>NASA Project</h1>
+                </div>
                 <div>
                     <Login />
                 </div>

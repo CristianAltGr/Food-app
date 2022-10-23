@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import space from "../../assets/space_back.jpg"
+import { mobile, tablet } from "../../styles/Media";
 
 const NavStyle = styled.div`
 
@@ -6,8 +8,17 @@ const NavStyle = styled.div`
     flex-direction: column;
     justify-content: space-between;
     height : 24vh ;
-    background-color: #290275 ;
+    background-image: url(${space}) ;
     color: white;
+
+    div{
+        display: flex;
+        align-items: center;
+        
+        img{
+            width: 20vh;
+        }
+    }
 
     section{
         
@@ -19,19 +30,71 @@ const NavStyle = styled.div`
     nav{
         display: flex;
         justify-content: center;
-        height: 5vh;
+        height: 6vh;
         margin: 0;
-        background-color: #874FF7;
+        background-color: #0e012b;
         border: 1px solid white;
     }
 
     .linkNav{
-
-        height: 100%;
-        margin: 0;
+        
+        height: 20px;
+        margin-left: 3vh;
         padding: 1vh;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-decoration: none;
         color: white;
+
+        :hover{
+            color: #f7422b ;
+        
+        }
+    }   
+
+    ${tablet}{
+
+        h1{
+            display: none;
+        }
+
+        nav{
+            
+             .linkNav{
+            margin-left: 0;
+            font-size: 2vh;
+            letter-spacing: 0;
+        }
+        }
+    }
+
+    ${mobile}{
+
+        div {
+            
+            img{
+            width: 13vh;
+            }   
+        }
+
+        h1{
+           display: none;
+        }           
+
+        nav{
+            display: flex ;
+            flex-direction: column;
+            height: 26vh;
+            margin-bottom: 2vh;
+            text-align: center;
+        }
+
+
+        .linkNav{
+            margin-left: 0;
+        }
     }
 `
+
 
 export default NavStyle;

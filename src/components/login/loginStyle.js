@@ -1,14 +1,29 @@
 import styled from "styled-components"
+import { mobile, tablet } from "../../styles/Media"
 
 export const LogInButton = styled.button`
     
-    height: 6vh;
-    width: 13vh;
+    height: 8vh;
+    width: 30vh;
     margin: 2vh;
-       
-    p:hover{
-        color: white;
+    background-color: #2544f7 ;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+    
+    :hover{
+        background-color: #f7422b;
         transition: 0.5s;
+        color: white;
+    }
+
+    ${tablet}{
+        width: 20vh;
+    }
+
+    ${mobile}{
+        width: 15vh;
     }
 `
 
