@@ -68,7 +68,7 @@ const Login = () => {
         localStorage.setItem(`users`, JSON.stringify(listUsers));
         console.log("LLista d'usuaris per la correció: ", listUsers);
     }, [listUsers])
-
+    //<button onClick={() => { setListUsers([]) }}>Delete user list</button>
 
     return (
         <>
@@ -85,7 +85,6 @@ const Login = () => {
                             <div>
                                 <button onClick={checkUsers}>Log in</button>
                                 <button onClick={saveUser}>Sign up</button>
-                                <button onClick={() => { setListUsers([]) }}>Delete user list</button>
                             </div>
                         </form>
                     </LogInCard>

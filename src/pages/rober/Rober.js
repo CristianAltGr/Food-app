@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import MarsRober from '../../components/marsRober/MarsRober';
 import perseveranceImg from "../../assets/Perseverance_rover.jpg"
 import curiosityImg from "../../assets/Curiosity_rover.jpg"
+import RoberStyle, { RoberCard } from './RoberStyle';
 
 const Rober = () => {
 
@@ -22,7 +23,7 @@ const Rober = () => {
     }, []);
 
     return (
-        <>
+        <RoberStyle>
             <div>
                 <h3>Robers Mars</h3>
                 <p>You can see the photos than Robers make four days ago at Mars, in this moment there are two Robers:</p>
@@ -34,11 +35,11 @@ const Rober = () => {
                     <a href="https://www.britannica.com/topic/NASA" target="_blank" rel="noopener noreferrer"> page</a></p>
             </div>
 
-
-            <MarsRober rober={perseverance.photos} machine={{ title: "Perseverance", img: perseveranceImg }}></MarsRober>
-            <MarsRober rober={curiosity.photos} machine={{ title: "Curiosity", img: curiosityImg }}></MarsRober>
-
-        </>
+            <RoberCard>
+                <MarsRober rober={perseverance.photos} machine={{ title: "Perseverance", img: perseveranceImg }}></MarsRober>
+                <MarsRober rober={curiosity.photos} machine={{ title: "Curiosity", img: curiosityImg }}></MarsRober>
+            </RoberCard>
+        </RoberStyle>
     )
 }
 

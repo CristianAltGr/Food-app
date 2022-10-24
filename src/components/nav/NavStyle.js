@@ -31,6 +31,7 @@ const NavStyle = styled.div`
         display: flex;
         justify-content: center;
         height: 6vh;
+        padding: 2vh;
         margin: 0;
         background-color: #0e012b;
         border: 1px solid white;
@@ -39,9 +40,8 @@ const NavStyle = styled.div`
     .linkNav{
         
         height: 20px;
-        margin-left: 3vh;
+        margin-left: 1vh;
         padding: 1vh;
-        letter-spacing: 1px;
         font-weight: 600;
         text-decoration: none;
         color: white;
@@ -58,7 +58,13 @@ const NavStyle = styled.div`
             display: none;
         }
 
-        nav{
+        nav{  
+            display: flex ;
+            flex-direction: column;
+            height: 26vh;
+            margin-bottom: 2vh;
+            text-align: center;
+        
             
              .linkNav{
             margin-left: 0;

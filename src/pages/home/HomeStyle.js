@@ -7,10 +7,10 @@ const HomeStyle = styled.div`
 
     
     section{
-        display: grid ;
-        grid-template-columns: 20% 60% 20%;
+        display: flex;
+        flex-direction: column;
         margin: 5vh;
-        margin-top: 8vh;
+        margin-top: 12vh;
         
 
         h2{
@@ -54,18 +54,14 @@ const HomeStyle = styled.div`
     }
 
     ${tablet}{
-            
+              
+        margin-top: 25vh;
+        
         section{
             display: flex;
             flex-direction: column;
             }
     }
-
-    ${mobile}{
-
-        margin-top: 25vh;
-    }
-
 `
 
 export const Photo = styled.div`
@@ -151,6 +147,26 @@ export const ListStyle = styled.div`
                 color: black;
                 margin: 0;
                 text-align: center;
+            }
+        }
+
+
+        ${tablet}{
+            
+            display: flex;
+            flex-direction: column;
+            
+            ul{
+                padding-left: 0;
+            }
+
+            h2{
+                margin: 1vh;
+                font-size: 4vh;
+            }
+
+            li{
+                width: 90%;
             }
         }
     }

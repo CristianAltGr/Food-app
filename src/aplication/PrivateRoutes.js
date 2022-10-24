@@ -8,7 +8,7 @@ const PrivateRoute = () => {
     const [logged] = useContext(AppContext);
 
     if (!logged) {
-        alert("The acces is only for users")
+        setTimeout(() => alert("You must be logged for watch"));
         return <Navigate to={process.env.PUBLIC_URL} />
     }
 

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import GetAsteriodData from '../../services/AsteroidData';
+import AsteroidItemStyle from './AsteroidItemStyle';
 
 const AsteroidItem = () => {
 
@@ -24,24 +25,27 @@ const AsteroidItem = () => {
 
 
     return (
-        <>
+        <AsteroidItemStyle>
             {ready &&
-                < div >
+                < >
                     <h3>{asteroid.designation}</h3>
-                    <p>id: {asteroid.id}</p>
-                    <p>Size diameter:</p>
-                    <p>Max: {parseFloat(asteroid.estimated_diameter.meters.estimated_diameter_max).toFixed(2)} m </p>
-                    <p>Min:   {parseFloat(asteroid.estimated_diameter.meters.estimated_diameter_min).toFixed(2)} m </p>
-                    <p>Dangerous hazarous: {asteroid.is_potentially_hazardous_asteroid ? "Yes" : "No"}</p>
-                    <p>Sentry obrject: {asteroid.is_sentry_object ? "Yes" : "No"}</p>
-                    <p>First observation date: {asteroid.orbital_data.first_observation_date}</p>
-                    <p>Last observation date: {asteroid.orbital_data.last_observation_date}</p>
-
+                    <div>
+                        <ul>
+                            <p>Id: {asteroid.id}</p>
+                            <p>Size diameter:</p>
+                            <p>    - Max: {parseFloat(asteroid.estimated_diameter.meters.estimated_diameter_max).toFixed(2)} m </p>
+                            <p>    - Min:   {parseFloat(asteroid.estimated_diameter.meters.estimated_diameter_min).toFixed(2)} m </p>
+                        </ul>
+                        <ul>
+                            <p>Dangerous hazarous: {asteroid.is_potentially_hazardous_asteroid ? "Yes" : "No"}</p>
+                            <p>Sentry obrject: {asteroid.is_sentry_object ? "Yes" : "No"}</p>
+                            <p>First observation date: {asteroid.orbital_data.first_observation_date}</p>
+                            <p>Last observation date: {asteroid.orbital_data.last_observation_date}</p>
+                        </ul>
+                    </div>
                     <section>
                         <h3>Close approach</h3>
                         {orbital.map((orbit) => {
-
-
                             return (
 
                                 <div key={orbit.close_approach_date_full}>
@@ -52,13 +56,10 @@ const AsteroidItem = () => {
                                 </div>
                             )
                         })}
-
                     </section>
-                </div >
-
-
+                </>
             }
-        </>
+        </AsteroidItemStyle>
     )
 }
 

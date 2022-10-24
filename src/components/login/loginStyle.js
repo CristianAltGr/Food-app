@@ -28,16 +28,17 @@ export const LogInButton = styled.button`
 `
 
 export const LogInCard = styled.div`
-    position: absolute;
+    position: fixed;
     z-index: 1;
-    left: 30%;
-    top: auto;
+    left: 20%;
+    top: 20%;
     height: 55%;
-    width: 40%;
+    width: 60%;
     display: flex;
-    background-color: #3e3ef1;
+    background-color: #1e1e7c;
     align-items: center;
     justify-content: center;
+    border: 5px solid black;
 
     form{
         height: 100%;
@@ -49,8 +50,8 @@ export const LogInCard = styled.div`
             margin-top: 3vh ;
             margin-bottom: 0;
             font-size: 5vh;
-            font-weight: 300;
-            color: rgb(252, 239, 55);
+            font-weight: 700;
+            color: rgb(233, 233, 233);
 
         }
 
@@ -71,18 +72,35 @@ export const LogInCard = styled.div`
         }
 
         button{
-            width: 30%;
+            width: 40%;
             height: 7vh;
             margin: auto;
             margin-top: 5vh;
-            background-color: #80808075;
+            background-color: #f7422b;
             color: white;
-            font-weight: 300;
+            font-weight: 400;
             border-radius: 7px;
 
             :hover{
                 background-color: #3e3ef1;
                 transition: 0.5s;
+                border: 1px solid white;
+            }
+        }
+    }
+
+    ${tablet}{
+        width: 80%;
+        left: 10%;
+    }
+
+    ${mobile}{
+        width: 90%;
+        left: 4%;
+      form{
+            p{
+                font-size: 4vh;
+                font-weight: 400;
             }
         }
     }

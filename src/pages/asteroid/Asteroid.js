@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Link from "../../components/Link"
 import GetAsteroidsList from '../../services/AsteroidsList';
+import AsteroidStyle, { AsteroidListItem } from './AsteroidStyle';
 
 
 const Asteroid = () => {
@@ -35,28 +36,29 @@ const Asteroid = () => {
 
 
     return (
-        <>
+        <AsteroidStyle>
             <section>
                 <h2>Asteroids Inforrmation</h2>
                 <p>In this section you can watch a list of asteroid near to the earth.</p>
                 <input type="date" name="date" id="date" onChange={dateChange} />
             </section>
 
-            {asteroidsList.map(item => {
+            <AsteroidListItem>
+                {asteroidsList.map(item => {
 
-                const danger = item.is_potentially_hazardous_asteroid ? "Yes" : "No"
-                return (
+                    const danger = item.is_potentially_hazardous_asteroid ? "Yes" : "No"
+                    return (
 
-                    <div key={item.id}>
+                        <div key={item.id}>
 
-                        <Link to={"/projects/asteroids/" + item.neo_reference_id} className="asteroid" ><p>Name:{item.name}</p></Link>
-                        <p>Potencial danger: {danger}</p>
-                        <p>Close approach: {item.close_approach_data[0].close_approach_date_full}</p>
-                    </div>
-                )
-            })}
-
-        </>
+                            <Link to={"/projects/asteroids/" + item.neo_reference_id} className="asteroid" ><p>{item.name}</p></Link>
+                            <p>Potencial danger: {danger}</p>
+                            <p>Close approach: {item.close_approach_data[0].close_approach_date_full}</p>
+                        </div>
+                    )
+                })}
+            </AsteroidListItem>
+        </AsteroidStyle>
     )
 }
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { getEarthPhoto } from '../../services/Earth'
-import EarthStyle from './PhotoEarthStyle';
+import EarthStyle, { ItemPhoto } from './PhotoEarthStyle';
 
 const PhotoEarth = () => {
 
     const today = new Date();
-    const day = today.getDate() - 3;
+    const day = today.getDate() - 4;
     const month = today.getMonth() + 1;
     const year = today.getFullYear();
     const [images, setImages] = useState([]);
@@ -33,26 +33,28 @@ const PhotoEarth = () => {
 
         <EarthStyle>
 
-            <h2>Photos of the Earth</h2>
+
             <section>
+                <h2>Photos of the Earth</h2>
                 <p>These photos are made on {date}</p>
-                <p>You can search photos of any day: "Note: NASA sends photos until last three days"</p>
+                <p>You can search photos of any day: "Note: NASA sends photos until last four days"</p>
                 <input type="date" name="date" id="date" onChange={dateChange} />
             </section>
 
-            {images.map(image => {
+            <ItemPhoto>
+                {images.map(image => {
 
-                const url = `https://api.nasa.gov/EPIC/archive/natural/${image.date.slice(0, 4)}/${image.date.slice(5, 7)}/${image.date.slice(8, 10)}/png/epic_1b_${image.identifier}.png?api_key=HTZi2cPx9Q4rCTbCy3SrBnQY4cIHe7eWeJdT8TZw`;
+                    const url = `https://api.nasa.gov/EPIC/archive/natural/${image.date.slice(0, 4)}/${image.date.slice(5, 7)}/${image.date.slice(8, 10)}/png/epic_1b_${image.identifier}.png?api_key=HTZi2cPx9Q4rCTbCy3SrBnQY4cIHe7eWeJdT8TZw`;
 
-                return (
-                    <div key={image.identifier}>
-                        <img src={url} alt="foto of the earth" />
-                        <p>Cocentroid coordinates: lat: {image.centroid_coordinates.lat} long: {image.centroid_coordinates.lon}</p>
-                    </div>
-                );
-            })}
-
-        </EarthStyle>
+                    return (
+                        <div key={image.identifier}>
+                            <img src={url} alt="foto of the earth" />
+                            <p>Cocentroid coordinates: <br /> Lat: {image.centroid_coordinates.lat} Long: {image.centroid_coordinates.lon}</p>
+                        </div>
+                    );
+                })}
+            </ItemPhoto>
+        </EarthStyle >
     );
 }
 
