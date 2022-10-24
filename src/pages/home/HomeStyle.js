@@ -4,13 +4,13 @@ import { mobile, tablet } from "../../styles/Media";
 
 
 const HomeStyle = styled.div`
-
+    margin-top: 15vh;
     
     section{
         display: flex;
         flex-direction: column;
         margin: 5vh;
-        margin-top: 12vh;
+        margin-top: 15vh;
         
 
         h2{
@@ -55,7 +55,7 @@ const HomeStyle = styled.div`
 
     ${tablet}{
               
-        margin-top: 25vh;
+        margin-top: 30vh;
         
         section{
             display: flex;

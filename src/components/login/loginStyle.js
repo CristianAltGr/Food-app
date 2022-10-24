@@ -4,7 +4,7 @@ import { mobile, tablet } from "../../styles/Media"
 export const LogInButton = styled.button`
     
     height: 8vh;
-    width: 30vh;
+    width: 25vh;
     margin: 2vh;
     background-color: #2544f7 ;
     letter-spacing: 1px;
@@ -19,11 +19,12 @@ export const LogInButton = styled.button`
     }
 
     ${tablet}{
-        width: 20vh;
+        width: 17vh;
     }
 
     ${mobile}{
-        width: 15vh;
+        width: 13vh;
+        border-radius: 15px;
     }
 `
 

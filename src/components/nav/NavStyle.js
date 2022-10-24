@@ -16,7 +16,7 @@ const NavStyle = styled.div`
         align-items: center;
         
         img{
-            width: 20vh;
+            width: 18vh;
         }
     }
 
@@ -40,7 +40,6 @@ const NavStyle = styled.div`
     .linkNav{
         
         height: 20px;
-        margin-left: 1vh;
         padding: 1vh;
         font-weight: 600;
         text-decoration: none;
@@ -57,7 +56,11 @@ const NavStyle = styled.div`
         h1{
             display: none;
         }
-
+        
+        img{
+            width: 11vh;
+        }  
+        
         nav{  
             display: flex ;
             flex-direction: column;

@@ -9,6 +9,7 @@ const FooterStyle = styled.footer`
     background-color: #222222;
     color: white;
     padding: 4vh;
+    margin-top: 4vh;
     
     p{
         margin-top: 2.2vh;

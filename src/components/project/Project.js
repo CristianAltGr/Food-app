@@ -11,10 +11,15 @@ const Project = ({ id, update }) => {
     const parseObject = () => {
 
         const descript = project.description.replace(/<([^>]+)>/ig, " ")
-        const transcribe = project.benefits.replace(/<([^>]+)>/ig, " ")
-
         setDescription(descript);
-        setGoal(transcribe);
+
+
+        if (project.benefits !== undefined) {
+            const transcribe = project.benefits.replace(/<([^>]+)>/ig, " ")
+            setGoal(transcribe);
+        } else {
+            setGoal("No write benefits at the document")
+        }
     }
 
     const changeActive = () => {
@@ -40,14 +45,14 @@ const Project = ({ id, update }) => {
 
             {active &&
                 <div>
-                    <h5 >{project.title}</h5>
+
                     <h6>Last update: {update}</h6>
 
                     <section>
-                        <p>{description}</p>
-                        <p>{goal}</p>
-                        <p>Started date: {project.startDateString}</p>
-                        <p>Status: {project.statusDescription}</p>
+                        <p><u>Description:</u> {description}</p>
+                        <p><u>Benefits:</u>{goal}</p>
+                        <p><u>Started date:</u> {project.startDateString}</p>
+                        <p><u>Status:</u> {project.statusDescription}</p>
                     </section>
                 </div>
             }

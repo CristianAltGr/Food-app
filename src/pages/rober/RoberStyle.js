@@ -32,6 +32,7 @@ const RoberStyle = styled.div`
 
     ${tablet}{
         margin-top: 25vh;
+        padding-top: 5vh;
     }
 `
 
