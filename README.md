@@ -2,7 +2,7 @@ Sprint 9 of It Academy, free project with React. I made this one about NASA Proj
 
     > Photo of the day
     > Photos of the Earth (You can chose the date)
-    > Info of Asteroids close to the Earth (You can chose the date)
+    > Info of Asteroids close to the Earth (You can chose the date and look the details)
     > Robers Photos (You can chose the Rober and the camera)
     > Info of NASA Projects this month
     
